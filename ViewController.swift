@@ -32,6 +32,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    func makeTask() -> [Task] {
+        let task1 = Task()
+        task1.name = "Walk the dog"
+    }
 
 }
 
