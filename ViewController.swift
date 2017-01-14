@@ -12,6 +12,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
+    var task : [Task] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func makeTask() -> [Task] {
         let task1 = Task()
         task1.name = "Walk the dog"
+        task2.important
     }
 
 }
