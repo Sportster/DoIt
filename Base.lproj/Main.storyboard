@@ -50,7 +50,7 @@
                     <connections>
                         <outlet property="tableView" destination="erM-52-0FW" id="l52-Ja-E78"/>
                         <segue destination="g8c-Gw-h5i" kind="show" identifier="addSegue" id="ZxG-6w-hSN"/>
-                        <segue destination="kVf-IG-Tce" kind="show" identifier="selectTaskSegue" id="tI2-7O-6U7"/>
+                        <segue destination="kVf-IG-Tce" kind="show" identifier="selectTaskSegue" id="eXk-iR-WdB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -110,6 +110,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zQY-af-ncl" firstAttribute="top" secondItem="h6k-oZ-w1g" secondAttribute="bottom" constant="59" id="MIQ-Ed-yvR"/>
                             <constraint firstItem="zQY-af-ncl" firstAttribute="leading" secondItem="3VT-wK-mi8" secondAttribute="leading" id="N1i-iN-cnH"/>
@@ -128,7 +129,6 @@
                     <connections>
                         <outlet property="importantSwitch" destination="Cj9-al-qie" id="Sh6-fV-PLp"/>
                         <outlet property="taskNameField" destination="3VT-wK-mi8" id="RiX-Uk-3mj"/>
-                        <outlet property="taskNameTextField" destination="3VT-wK-mi8" id="JYg-a9-gHF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYG-Gd-STX" userLabel="First Responder" sceneMemberID="firstResponder"/>
