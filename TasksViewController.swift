@@ -13,14 +13,14 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     var tasks : [Task] = []
-    
+    var selectedIndex = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        tasks = makeTasks()
+         tasks = makeTasks()
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -43,6 +43,9 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedIndex = indexPath.row
+        
         let task = tasks[indexPath.row] {
             performSegue(withIdentifier: "selectTaskSegue", sender: Task)
         }
@@ -61,20 +64,46 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             task3.important = false
             return [task1, task2, task3]
         }
-        
-        @IBAction func plusTapped(_ sender: AnyObject) {
-            performSegue(withIdentifier: "addSegue", sender: nil)
-        }
-        override func prepare(for segue: UIStoryboardSegue, sender: AnyObject) {
-            if segue.identifier == "addSegue" {
-                let nextVC = segue.destination as! CreateTaskViewController
-                nextVC.previousVC = self
-            }
-            if segue.identifier == "selectTaskSegue" {
-                let nextVC = segue.destination as! CompleteTaskViewController
-                nextVC.task = sender as! Task
-            }
-        }
-}
 
-}
+       
+        
+        
+
+        }
+    
+    @IBAction func plusTapped(_ sender: Any) {
+        performSegue(withIdentifier: "addSegue", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! CreateTaskViewController
+        nextVC.previousVC = self
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

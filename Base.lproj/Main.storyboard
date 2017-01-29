@@ -43,7 +43,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="GIJ-ff-lEE"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cYR-kS-Vuc">
                             <connections>
-                                <action selector="plusTapped:" destination="BYZ-38-t0r" id="XH3-Ic-qCh"/>
+                                <action selector="plusTapped:" destination="BYZ-38-t0r" id="IDc-qf-gNg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -128,6 +128,7 @@
                     <connections>
                         <outlet property="importantSwitch" destination="Cj9-al-qie" id="Sh6-fV-PLp"/>
                         <outlet property="taskNameField" destination="3VT-wK-mi8" id="RiX-Uk-3mj"/>
+                        <outlet property="taskNameTextField" destination="3VT-wK-mi8" id="JYg-a9-gHF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYG-Gd-STX" userLabel="First Responder" sceneMemberID="firstResponder"/>
