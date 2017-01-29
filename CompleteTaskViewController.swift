@@ -11,7 +11,7 @@ import UIKit
 class CompleteTaskViewController: UIViewController {
     
     @IBOutlet weak var taskLabel: UILabel!
-    var task : Task! = nil
+    var task : Task? = nil
    
     
     override func viewDidLoad() {
@@ -19,7 +19,7 @@ class CompleteTaskViewController: UIViewController {
         
         
         
-        if task!.important {
+        if task!.important { 
             taskLabel.text = " ❗️\(task!.name!)"
             
         } else {

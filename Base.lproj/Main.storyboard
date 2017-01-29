@@ -50,7 +50,7 @@
                     <connections>
                         <outlet property="tableView" destination="erM-52-0FW" id="l52-Ja-E78"/>
                         <segue destination="g8c-Gw-h5i" kind="show" identifier="addSegue" id="ZxG-6w-hSN"/>
-                        <segue destination="kVf-IG-Tce" kind="show" identifier="selectTaskSegue" id="eXk-iR-WdB"/>
+                        <segue destination="kVf-IG-Tce" kind="show" identifier="selectTaskSegue" id="Hpz-e8-FJ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
