@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i7N-dA-mzd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i7N-dA-mzd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -50,6 +50,7 @@
                     <connections>
                         <outlet property="tableView" destination="erM-52-0FW" id="l52-Ja-E78"/>
                         <segue destination="g8c-Gw-h5i" kind="show" identifier="addSegue" id="ZxG-6w-hSN"/>
+                        <segue destination="kVf-IG-Tce" kind="show" identifier="selectTaskSegue" id="tI2-7O-6U7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -109,7 +110,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zQY-af-ncl" firstAttribute="top" secondItem="h6k-oZ-w1g" secondAttribute="bottom" constant="59" id="MIQ-Ed-yvR"/>
                             <constraint firstItem="zQY-af-ncl" firstAttribute="leading" secondItem="3VT-wK-mi8" secondAttribute="leading" id="N1i-iN-cnH"/>
@@ -133,6 +133,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYG-Gd-STX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="139.880059970015"/>
+        </scene>
+        <!--Complete Task View Controller-->
+        <scene sceneID="pYM-iU-uyq">
+            <objects>
+                <viewController id="kVf-IG-Tce" customClass="CompleteTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1by-au-Sr7"/>
+                        <viewControllerLayoutGuide type="bottom" id="iie-nn-odK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kjP-6w-JLl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XK7-I9-kSj">
+                                <rect key="frame" x="157" y="84" width="61" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmz-JU-0vA">
+                                <rect key="frame" x="154" y="139" width="67" height="30"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="completeTapped:" destination="kVf-IG-Tce" eventType="touchUpInside" id="NCp-AX-Vyx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XK7-I9-kSj" firstAttribute="centerX" secondItem="kjP-6w-JLl" secondAttribute="centerX" id="8f0-Z2-qtu"/>
+                            <constraint firstItem="jmz-JU-0vA" firstAttribute="top" secondItem="XK7-I9-kSj" secondAttribute="bottom" constant="25" id="Dou-gG-Su2"/>
+                            <constraint firstItem="jmz-JU-0vA" firstAttribute="centerX" secondItem="kjP-6w-JLl" secondAttribute="centerX" id="PIu-xu-1Xo"/>
+                            <constraint firstItem="XK7-I9-kSj" firstAttribute="top" secondItem="1by-au-Sr7" secondAttribute="bottom" constant="20" id="wVV-b9-DI1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="taskLabel" destination="XK7-I9-kSj" id="EIT-BI-dxP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AiL-6s-dhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="889"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L3b-HD-1EQ">

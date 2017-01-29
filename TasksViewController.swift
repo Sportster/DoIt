@@ -42,29 +42,39 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    func makeTasks() -> [Task] {
-        let task1 = Task()
-        task1.name = "Walk the dog"
-        task1.important = false
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let task = tasks[indexPath.row] {
+            performSegue(withIdentifier: "selectTaskSegue", sender: Task)
+        }
         
-        let task2 = Task()
-        task2.name = "Buy Cheese"
-        task2.important = true
+        func makeTasks() -> [Task] {
+            let task1 = Task()
+            task1.name = "Walk the dog"
+            task1.important = false
+            
+            let task2 = Task()
+            task2.name = "Buy Cheese"
+            task2.important = true
+            
+            let task3 = Task()
+            task3.name = "Feed fish"
+            task3.important = false
+            return [task1, task2, task3]
+        }
         
-        let task3 = Task()
-        task3.name = "Feed fish"
-        task3.important = false
-        return [task1, task2, task3]
-    }
-    
-    @IBAction func plusTapped(_ sender: Any) {
-        performSegue(withIdentifier: "addSegue", sender: nil)
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let nextVC = segue.destination as! CreateTaskViewController
-        nextVC.previousVC = self
-        
-    }
+        @IBAction func plusTapped(_ sender: AnyObject) {
+            performSegue(withIdentifier: "addSegue", sender: nil)
+        }
+        override func prepare(for segue: UIStoryboardSegue, sender: AnyObject) {
+            if segue.identifier == "addSegue" {
+                let nextVC = segue.destination as! CreateTaskViewController
+                nextVC.previousVC = self
+            }
+            if segue.identifier == "selectTaskSegue" {
+                let nextVC = segue.destination as! CompleteTaskViewController
+                nextVC.task = sender as! Task
+            }
+        }
 }
 
+}

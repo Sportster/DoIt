@@ -13,7 +13,7 @@ class CreateTaskViewController: UIViewController {
     @IBOutlet weak var importantSwitch: UISwitch!
     @IBOutlet weak var taskNameField: UITextField!
     
-    var previousVC = TasksViewController()
+    var previousVC = TasksViewController()  
     
     override func viewDidLoad() {
         super.viewDidLoad()
